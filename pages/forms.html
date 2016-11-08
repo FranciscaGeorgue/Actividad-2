@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Elecciones Municipales 2016</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+        
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <h2 class="centrar">Elecciones Municipales 2016</h2>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-info fa-fw"></i> Información</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Inscripción y votación</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Gráficos<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Resultados</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Inscripción y votación</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-edit fa-fw"></i>
+                            Información personal y de votación
+                        </div>
+                        <div class="panel-body">
+                            <form enctype="multipart/form-data" method="post" action="enviar.php" accept-charset="UTF-8">
+            <!-- Hidden -->
+            <input type="hidden" name="enviado" value="1">
+                <!-- Texto -->
+                <div class="form-group">
+                  <b>Nombre</b>
+                  <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
+                </div>
+                <!-- Number -->
+                <div class="form-group">
+                  <b>Rut</b>
+                  <input type="number" class="form-control " name="rut" placeholder="Ingrese su RUT" maxlength="12">
+                </div>
+                <!-- Email -->
+                <div class="form-group">
+                  <b>Sexo</b><br />
+                  <input type="radio" name="sexo" value="m"> Masculino<br />
+                  <input type="radio" name="sexo" value="f"> Femenino<br />
+                  <input type="radio" name="sexo" value="nr"> No Responde<br />
+                </div>
+                <!-- Password -->
+                <div class="form-group">
+                  <b>Dirección</b>
+                  <input type="text" class="form-control" name="direccion" placeholder="Ingrese su direccion">
+                </div>
+                <!-- Text -->
+                <div class="form-group">
+                  <b>Comuna</b>
+                  <input type="text" class="form-control" name="comuna"
+                  placeholder="Ingrese su comuna">
+                </div>
+                                <hr>
+                                <div class="panel-heading">
+                        <h3 class="panel-title">Seleccione un alcalde:</h3>
+                    </div>
+                <div class="form-group">
+                    <input type="radio" name="alcalde" value="Leopoldo Méndez Alcayaga"> Leopoldo Méndez Alcayaga<br />
+                    <input type="radio" name="alcalde" value="Jorge Castro Muñoz"> Jorge Castro Muñoz<br />
+                    <input type="radio" name="alcalde" value="Carlos Lemus Cid"> Carlos Lemus Cid<br />
+                    <input type="radio" name="alcalde" value="Jorge Sharp Fajardo"> Jorge Sharp Fajardo<br />
+                </div>
+                                <hr>
+                                <div class="panel-heading">
+                        <h3 class="panel-title">Seleccione a el/los concejal/es:</h3>
+                    </div>
+                <div class="form-group">
+                    <div class="form-group">
+                      <input type="checkbox" name="concejales[]" value="concejal1"> Marcelo Barraza Vivar<br />
+                      <input type="checkbox" name="concejales[]" value="concejal2"> Marina Huerta Rosales<br />
+                      <input type="checkbox" name="concejales[]" value="concejal3"> Concejal n<br />
+                    </div>
+                </div>
+            <div class="panel-footer">
+        <div class="text-right">
+          <a href="./" class="btn btn-primary">
+            <i class="glyphicon glyphicon-repeat"></i>
+            Reiniciar
+          </a>
+          <!-- Button submit -->
+          <button type="submit" class="btn btn-success">
+            Enviar
+            <i class="glyphicon glyphicon-menu-right"></i>
+          </button>
+        </div>
+      </div>
+          </form>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
